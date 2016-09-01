@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///H:/VSH%20Lokaverkefni/VSH%20Lokaverkefni.html#a2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>skilaverk 8</title>
+  <link rel="stylesheet" type="text/css" href="./vshlokaverk_files/styles8.css">
+  
+</head>
+<body ontouchmove="BlockMove(event);">
+
+
+<style>
+
+
+/* The Basic Style for all Pages */
+
+.page { 
+position: absolute; 
+width: 100%; 
+height: 100%; 
+}
+
+
+
+/* The Pages */
+
+#i1 { left: 0%; background-color: #fff; }
+#i1 { left: 100%; background-color: #fff; }
+#i2 { left: 200%; background-color: #bbb; }
+#i3 { left: 300%; background-color: #777; }
+
+
+
+/* The Transition Effect */
+
+.page { 
+-webkit-transition: -webkit-transform 0.8s;
+-moz-transition: -moz-transform 0.8s;
+-o-transition: -o-transform 0.8s;
+transition: transform 0.8s;
+}
+
+
+
+/* The Sliding Action */
+/* TranslateX for better Performance. Translate3D for better Performance on Ipad. */
+
+#a1:target .page { -webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%); }
+#a2:target .page { -webkit-transform: translateX(-200%); -moz-transform: translateX(-200%); -o-transform: translateX(-200%); transform: translateX(-200%); }
+#a3:target .page { -webkit-transform: translateX(-300%); -moz-transform: translateX(-300%); -o-transform: translateX(-300%); transform: translateX(-300%); }
+
+
+
+/* The First Page - Initial Positioning without Anchor */
+
+.page { 
+-webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%);
+}
+
+
+</style>
+
+
+<!-- This is for the ipad. Check it there too. -->
+
+<script> 
+ function BlockMove(event) {
+  // Tell Safari not to move the window.
+  event.preventDefault() ;
+ }
+</script> 
+ 
+
+ 
+
+
+
+
+
+
+
+
+<!-- These divs are used for anchor-jumps with the pseudoclass :target -->
+
+<div id="a1">
+ <div id="a2">
+  <div id="a3">
+
+
+
+   <!-- Top Navigation. Ya, tables are evil. -->
+
+   <table> 
+    <tbody><tr> 
+     <td><a href="file:///H:/VSH%20Lokaverkefni/VSH%20Lokaverkefni.html#a1" id="p1">1</a></td> 
+     <td><a href="file:///H:/VSH%20Lokaverkefni/VSH%20Lokaverkefni.html#a2" id="p2">2</a></td> 
+     <td><a href="file:///H:/VSH%20Lokaverkefni/VSH%20Lokaverkefni.html#a3" id="p3">3</a></td> 
+    </tr> 
+   </tbody></table>
+
+
+
+   <!-- Fallback -->
+
+   <div id="i0" class="page">
+
+    <h1>Your browser sucks.</h1>
+
+   </div>
+
+
+
+   <!-- First Page #a1 -->
+
+   <div id="i1" class="page">
+
+    <a href="file:///H:/VSH%20Lokaverkefni/VSH%20Lokaverkefni.html#a3" class="backbutton"></a>
+    <a href="file:///H:/VSH%20Lokaverkefni/VSH%20Lokaverkefni.html#a2" class="nextbutton"></a>
+
+    <h1>Parkour</h1>
+
+    <p>
+       Parkour er talinn sem "extreme" íþrótt. Það þýðir að það sé íþrótt sem er mjög hættuleg og að maður myndi mest líklegast meiða sig.<br>
+       Þeggar maður er að gera parkour þá verður maður að hafa í huga hvað maður er að gera hvert maður er að fara, hvaernig maður kemst<br>
+       þangað og hvar maður lendir.
+    </p>
+
+    <img src="./vshlokaverk_files/imgres.jpg">
+
+   </div>
+
+
+
+   <!-- Second Page #a2 -->
+
+   <div id="i2" class="page">
+
+    <a href="file:///H:/VSH%20Lokaverkefni/VSH%20Lokaverkefni.html#a1" class="backbutton"></a>
+    <a href="file:///H:/VSH%20Lokaverkefni/VSH%20Lokaverkefni.html#a3" class="nextbutton"></a>
+
+    <h1>Simplified Demo</h1>
+
+    <img src="./vshlokaverk_files/pakour.JPEG">
+
+   </div>
+
+
+
+   <!-- Third Page #a3 -->
+
+   <div id="i3" class="page">
+
+    <a href="file:///H:/VSH%20Lokaverkefni/VSH%20Lokaverkefni.html#a2" class="backbutton"></a>
+    <a href="file:///H:/VSH%20Lokaverkefni/VSH%20Lokaverkefni.html#a1" class="nextbutton"></a>
+
+    <h1>Check the Source Code</h1>
+
+    <img src="./vshlokaverk_files/pure-css-slideshow-3.png">
+
+   </div>
+
+
+
+  </div>
+ </div>
+</div>
+
+
+<footer>
+
+ <a href="http://www.designmadeingermany.de/" class="link">Design made in Iceland</a> <b>'2016</b>
+
+</footer>
+
+<iframe allowtransparency="true" frameborder="0" role="presentation" scrolling="no" src="./vshlokaverk_files/tweet_button.html" style="width:105px; height: 30px; position: fixed; bottom: 50px; right: 50px; z-index: 100;"></iframe> 
+
+<style>
+</body>
+</html></style></body></html>

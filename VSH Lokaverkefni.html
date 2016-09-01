@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>skilaverk 8</title>
+  <link rel="stylesheet" type="text/css" href="styles8.css">
+  <meta charset="utf-8">
+</head>
+<body>
+
+
+<style>
+
+
+/* The Basic Style for all Pages */
+
+.page { 
+position: absolute; 
+width: 100%; 
+height: 100%; 
+}
+
+
+
+/* The Pages */
+
+#i1 { left: 0%; background-color: #fff; }
+#i1 { left: 100%; background-color: #fff; }
+#i2 { left: 200%; background-color: #bbb; }
+#i3 { left: 300%; background-color: #777; }
+
+
+
+/* The Transition Effect */
+
+.page { 
+-webkit-transition: -webkit-transform 0.8s;
+-moz-transition: -moz-transform 0.8s;
+-o-transition: -o-transform 0.8s;
+transition: transform 0.8s;
+}
+
+
+
+/* The Sliding Action */
+/* TranslateX for better Performance. Translate3D for better Performance on Ipad. */
+
+#a1:target .page { -webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%); }
+#a2:target .page { -webkit-transform: translateX(-200%); -moz-transform: translateX(-200%); -o-transform: translateX(-200%); transform: translateX(-200%); }
+#a3:target .page { -webkit-transform: translateX(-300%); -moz-transform: translateX(-300%); -o-transform: translateX(-300%); transform: translateX(-300%); }
+
+
+
+/* The First Page - Initial Positioning without Anchor */
+
+.page { 
+-webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%);
+}
+
+
+</style>
+
+
+<!-- This is for the ipad. Check it there too. -->
+
+<script> 
+ function BlockMove(event) {
+  // Tell Safari not to move the window.
+  event.preventDefault() ;
+ }
+</script> 
+<body ontouchmove="BlockMove(event);"> 
+
+ 
+
+
+
+
+
+
+
+
+<!-- These divs are used for anchor-jumps with the pseudoclass :target -->
+
+<div id="a1">
+ <div id="a2">
+  <div id="a3">
+
+
+
+   <!-- Top Navigation. Ya, tables are evil. -->
+
+   <table> 
+    <tr> 
+     <td><a href="#a1" id="p1">1</a></td> 
+     <td><a href="#a2" id="p2">2</a></td> 
+     <td><a href="#a3" id="p3">3</a></td> 
+    </tr> 
+   </table>
+
+
+
+   <!-- Fallback -->
+
+   <div id="i0" class="page">
+
+    <h1>Your browser sucks.</h1>
+
+   </div>
+
+
+
+   <!-- First Page #a1 -->
+
+   <div id="i1" class="page">
+
+    <a href="#a3" class="backbutton"></a>
+    <a href="#a2" class="nextbutton"></a>
+
+    <h1>Parkour</h1>
+
+    <p>
+       Parkour er talinn sem "extreme" íþrótt. Það þýðir að það sé íþrótt sem er mjög hættuleg og að maður myndi mest líklegast meiða sig.<br>
+       Þeggar maður er að gera parkour þá verður maður að hafa í huga hvað maður er að gera hvert maður er að fara, hvaernig maður kemst<br>
+       þangað og hvar maður lendir.
+    </p>
+
+    <img src="imgres.jpg">
+
+   </div>
+
+
+
+   <!-- Second Page #a2 -->
+
+   <div id="i2" class="page">
+
+    <a href="#a1" class="backbutton"></a>
+    <a href="#a3" class="nextbutton"></a>
+
+    <h1>Simplified Demo</h1>
+
+    <img src="pure-css-slideshow-2.png">
+
+   </div>
+
+
+
+   <!-- Third Page #a3 -->
+
+   <div id="i3" class="page">
+
+    <a href="#a2" class="backbutton"></a>
+    <a href="#a1" class="nextbutton"></a>
+
+    <h1>Check the Source Code</h1>
+
+    <img src="pure-css-slideshow-3.png">
+
+   </div>
+
+
+
+  </div>
+ </div>
+</div>
+
+
+<footer>
+
+ <a href="http://www.designmadeingermany.de/" class="link">Design made in Iceland</a> <b>'2016</b>
+
+</footer>
+
+<iframe allowtransparency="true" frameborder="0" role="presentation" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fwww.designmadeingermany.de%2Fslideshow%2F&text=Pure CSS Slideshow:&via=Dmig" style="width:105px; height: 30px; position: fixed; bottom: 50px; right: 50px; z-index: 100;"></iframe> 
+
+<style>
+</body>
+</html>
